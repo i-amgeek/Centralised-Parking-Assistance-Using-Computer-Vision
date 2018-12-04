@@ -2,7 +2,7 @@
 # Centralised Parking Assistance Using Computer Vision
 
 <p align="center">
-<img src="https://github.com/i-amgeek/MoveHack/blob/master/images/app_logo.png" width = 380 height = 300/>
+<img src="https://raw.githubusercontent.com/i-amgeek/MoveHack/blob/master/images/app_logo.png" width = 380 height = 300/>
 </p>
 
 ## Inspiration
@@ -28,7 +28,7 @@ We will build a system using computer vision that will parse real-time occupancy
 * Any driver in the city can see nearest available parking spot for their vehicle on their mobile devices.
 
 <p align="center">
-<img src="https://github.com/i-amgeek/MoveHack/blob/master/images/Screenshot1.jpg" width = "250" height = "400"/>
+<img src="https://raw.githubusercontent.com/i-amgeek/MoveHack/blob/master/images/Screenshot1.jpg" width = "250" height = "400"/>
 </p>
 
 * Driver can select parking spot to view details, real-time available slots and book them.
