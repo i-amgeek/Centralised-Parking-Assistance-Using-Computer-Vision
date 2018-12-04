@@ -12,23 +12,20 @@
 <img src="https://github.com/i-amgeek/MoveHack/blob/master/images/app_logo.png" width = 380 height = 300/>
 </p>
 
-## Problem statement
-Artificial Intelligence for Indian Transport Infrastructure
-
 ## Inspiration
 The high demand of automobiles has also exploded the need of parking space. Over 30% of traffic slowdown is caused by parking difficulties taking around 20-25 minutes on average per person. If we could help them, the driving would reduce dramatically, releasing less Carbon Dioxide and clearing up the roads from parking spot hunters. We believe in solutions that are available for all cities to become smart cities.
 
 ## Idea
-We will build a system using computer vision that will parse parking space data in the cloud and will retrieve to a consumer app that will help the driver to find a parking spot around. All of this will be automatic, without any human intervention.
+We will build a system using computer vision that will parse real-time occupancy of parking space data in the cloud and will retrieve to a consumer app that will help the driver to find a parking spot around. It can increase revenues and faciliate reinforcement of illegal parking activities. All of this will be automatic, without any human intervention.
 
 ## Implementation
-* A camera at parking space will take images after regular interval.
+* A camera at parking space will take still images after regular interval.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/kunalgoyal9/MoveHack/master/images/read_me_image.jpeg" width= "300" height = "300"/>
 </p>
 
-* Feed those images to a deep learning architecture to detect available parking spots.
+* These images are send to our server where they are feeded to a deep learning architecture to detect occupancy and availability.
 <p align="center">
 <img src="https://raw.githubusercontent.com/kunalgoyal9/MoveHack/master/images/KunalPark2.png" width = "300" height = "300"/>
 </p>
@@ -41,10 +38,10 @@ We will build a system using computer vision that will parse parking space data 
 <img src="https://github.com/i-amgeek/MoveHack/blob/master/images/Screenshot1.jpg" width = "250" height = "400"/>
 </p>
 
-* Driver can select parking spot to view details, available slots and book them.
+* Driver can select parking spot to view details, real-time available slots and book them.
 
 ## Model Architecture
-We choose to fine-tune the pre-trained VGGNet (specifically its F-variant). The pre-trained weights can be obtained from [here](http://www.vlfeat.org/matconvnet/models/imagenet-vgg-f.mat).
+We choose to fine-tune the pre-trained VGGNet. The pre-trained weights can be obtained from [here](http://www.vlfeat.org/matconvnet/models/imagenet-vgg-f.mat).
 We fix the convolutional layers, i.e., we don't fine-tune the convolutional layers, only the dense layers above it. You can download checkpoint for testing the image directly from [here](https://drive.google.com/open?id=0B76BuJcKjuxqYXRmSzd2R3U4S2c)
 
 ## Dataset
@@ -63,15 +60,5 @@ image of each parking lot, we end up with ~ 695600 images of size 54x32.
 
 Use [pip](https://pypi.python.org/pypi/pip) to install them.
 
-## Testing
-```sh
-$ git clone --recursive https://github.com/i-amgeek/MoveHack
-$ python3.6 -m pip3 install -r requirements.txt
-$ cd test_model
-Download weights from 'https://drive.google.com/open?id=0B76BuJcKjuxqYXRmSzd2R3U4S2c' to test_model/weights .
-$ python3.6 test.py
-```
-
 ## Todo
-* Add payment gateway.
-* Use Model Compression to make object detection faster.
+- Use model compression to make object detection faster and computationally cheaper.
